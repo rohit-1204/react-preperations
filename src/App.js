@@ -13,8 +13,17 @@ import LifecycleComponent from './lifeCycleMethods/LifecycleComponent'
 import ConditionalRendering from'./conditional-rendering/ConditionalRendering'
 import HooksDemo from './hooks/HooksDemo';
 import StyleDemo from './style/StyleDemo'
+import BoostrapDemo from './boostrap/BoostrapDemo'
+import ArrayWithList from './arrayWithlist/ArrayWithlist'
+import ReactFragment from './react-fragment/ReactFragment'
+import SendDataChildtoParent from './sendDataChildtoParent/SendDataChildtoParent'
+
+
 function App() {
   const [name,setName] = useState('Anil');
+  function parentAlert(data){
+alert(JSON.stringify(data))
+  }
   return (
     <div className="App">
      <h1>HEllo React</h1>
@@ -33,6 +42,11 @@ function App() {
 <ConditionalRendering/>
 <HooksDemo/>
 <StyleDemo/>
+<BoostrapDemo/>
+<ArrayWithList/>
+<ReactFragment/>
+
+<SendDataChildtoParent alert={parentAlert}></SendDataChildtoParent>
     </div>
   );
 }
